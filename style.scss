@@ -2,6 +2,11 @@ $rangi-asosi-blue: #8ec2f2;
 $rangi-matn-dark: #252b42;
 $rangi-khokistar: #737373;
 $rangi-safed: #ffffff;
+$rangi-asosi-dark: #252b42;
+$rangi-khokistar: #737373;
+$rangi-safed: #ffffff;
+$rangi-zard-stars: #f3cd03;
+
 
 %shablon-card {
   background: $rangi-safed;
@@ -17,7 +22,6 @@ $rangi-safed: #ffffff;
 }
 
 .medical {
-  padding: 80px 0;
   font-family: sans-serif;
 
   .container {
@@ -26,18 +30,26 @@ $rangi-safed: #ffffff;
   }
 
   .top-content {
+    margin-left: 300px;
     text-align: center;
     margin-bottom: 80px;
+    
 
     h2 {
+        width: 500px;
       font-size: 40px;
+      margin: auto;
+      padding: 15px;
       color: $rangi-matn-dark;
     }
 
     p {
+        width: 450px;
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 80px;
       color: $rangi-khokistar;
       max-width: 500px;
-      margin: 20px auto;
     }
   }
 
@@ -83,6 +95,164 @@ $rangi-safed: #ffffff;
         display: block;
         padding: 0 30px 30px;
         color: #23a6f0;
+      }
+    }
+  }
+}
+@mixin flex-markaz($dir: row, $gap: 0) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin mobile {
+  @media (max-width: 510px) {
+    @content;
+  }
+}
+
+%qolibi-card {
+  background: $rangi-safed;
+  border: 1px solid #e8e8e8;
+  padding: 25px;
+}
+
+.reviews {
+  padding: 80px 0;
+  font-family: sans-serif;
+
+  .container {
+    max-width: 1050px;
+    margin: auto;
+  }
+
+  .top-content {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: 40px;
+      color: $rangi-asosi-dark;
+      margin: 0; 
+      
+      @include mobile {
+        font-size: 28px;
+        max-width: 250px;
+        margin: 0 auto;
+      }
+    }
+
+    p {
+      color: $rangi-khokistar;
+      max-width: 450px;
+      margin: 15px auto;
+      
+      @include mobile {
+        max-width: 300px;
+      }
+    }
+  }
+
+  .wrapper {
+    @include flex-markaz(row, 30px);
+
+    @include mobile {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+
+    .card {
+      @extend %qolibi-card;
+      flex: 1;
+
+      .stars {
+        color: $rangi-zard-stars;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+
+      .desc {
+        color: $rangi-khokistar;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+
+      .user {
+        @include flex-markaz(row, 15px);
+        justify-content: flex-start;
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .user-info {
+          h5 {
+            color: #23a6f0;
+            margin: 0;
+          }
+          span {
+            font-size: 12px;
+            color: $rangi-asosi-dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 510px) {
+    @content;
+  }
+}
+
+.medical {
+  .top-content {
+    margin: 0;
+    margin-left: 0;
+    text-align: center; 
+    margin-bottom: 30px;
+
+    h2 {
+      font-size: 35px;
+      color: $rangi-matn-dark;
+       margin: 0;
+
+      @include mobile {
+        max-width: 250px; 
+        margin: 0 auto;   
+        font-size: 24px;  
+      }
+    }
+
+    p {
+         margin: 0;
+      color: $rangi-khokistar;
+      max-width: 500px;
+     
+
+      @include mobile {
+        max-width: 300px; 
+        margin: 0 auto; 
+        font-size: 14px;
+      }
+    }
+  }
+
+  .wrapper {
+    @include markaz-flex(row, 30px);
+
+    @include mobile {
+      flex-direction: column;
+      padding: 0 20px;
+
+      .card {
+        width: 100%;
       }
     }
   }
