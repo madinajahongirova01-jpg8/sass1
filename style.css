@@ -1,0 +1,94 @@
+.medical .wrapper .card {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.medical {
+  padding: 80px 0;
+  font-family: sans-serif;
+}
+
+.medical .container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.medical .top-content {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.medical .top-content h2 {
+  font-size: 40px;
+  color: #252b42;
+}
+
+.medical .top-content p {
+  color: #737373;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.medical .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+
+.medical .wrapper .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.medical .wrapper .card .card-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  background-color: #8ec2f2;
+  padding: 40px 30px;
+  color: #ffffff;
+}
+
+.medical .wrapper .card .card-head .icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.medical .wrapper .card .list {
+  padding: 10px;
+  list-style: none;
+}
+
+.medical .wrapper .card .list li {
+  color: #737373;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.medical .wrapper .card .list li::before {
+  content: "- ";
+}
+
+.medical .wrapper .card .more {
+  display: block;
+  padding: 0 30px 30px;
+  color: #23a6f0;
+}
+/*# sourceMappingURL=style.css.map */
