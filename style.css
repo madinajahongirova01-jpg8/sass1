@@ -228,6 +228,117 @@
   color: #252b42;
 }
 
+.faq .wrapper .faq-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.faq {
+  padding: 80px 0;
+  font-family: sans-serif;
+  background-color: #fafafa;
+}
+
+.faq .container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.faq .top-content {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.faq .top-content h2 {
+  font-size: 40px;
+  color: #252b42;
+  margin: 0;
+  padding: 0;
+}
+
+.faq .top-content p {
+  color: #737373;
+  max-width: 500px;
+  margin: 15px auto 0;
+}
+
+.faq .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.faq .wrapper .faq-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.faq .wrapper .faq-card .icon {
+  color: #23a6f0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.faq .wrapper .faq-card .text h5 {
+  color: #252b42;
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+.faq .wrapper .faq-card .text p {
+  color: #737373;
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 510px) {
+  .faq .top-content h2 {
+    margin: 0 auto;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 510px) {
+  .faq .top-content p {
+    max-width: 250px;
+    margin: 15px auto 0;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 510px) {
+  .faq .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+    padding: 0 30px;
+  }
+  .faq .wrapper .faq-card {
+    width: 100%;
+    padding: 20px;
+  }
+  .faq .wrapper .faq-card h5 {
+    width: 250px;
+  }
+}
+
 .medical .top-content {
   margin: 0;
   margin-left: 0;

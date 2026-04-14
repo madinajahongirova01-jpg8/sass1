@@ -6,12 +6,11 @@ $rangi-asosi-dark: #252b42;
 $rangi-khokistar: #737373;
 $rangi-safed: #ffffff;
 $rangi-zard-stars: #f3cd03;
-
-
-%shablon-card {
-  background: $rangi-safed;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
-}
+$rangi-asosi-dark: #252b42;
+$rangi-khokistar: #737373;
+$rangi-kabu: #23a6f0;
+$rangi-safed: #ffffff;
+$bg-light: #fafafa;
 
 @mixin markaz-flex($direction: row, $gap: 0) {
   display: flex;
@@ -112,13 +111,6 @@ $rangi-zard-stars: #f3cd03;
     @content;
   }
 }
-
-%qolibi-card {
-  background: $rangi-safed;
-  border: 1px solid #e8e8e8;
-  padding: 25px;
-}
-
 .reviews {
   padding: 80px 0;
   font-family: sans-serif;
@@ -204,13 +196,118 @@ $rangi-zard-stars: #f3cd03;
     }
   }
 }
+@mixin flex-tanzim($samt: row, $fasil: 0) {
+  display: flex;
+  flex-direction: $samt;
+  gap: $fasil;
+}
 
+%qolibi-kuti {
+  background-color: $rangi-safed;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.faq {
+  padding: 80px 0;
+  font-family: sans-serif;
+  background-color: $bg-light;
+
+  .container {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+
+  .top-content {
+    text-align: center;
+    margin-bottom: 80px;
+
+    h2 {
+      font-size: 40px;
+      color: $rangi-asosi-dark;
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      color: $rangi-khokistar;
+      max-width: 500px;
+      margin: 15px auto 0;
+    }
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    .faq-card {
+      @extend %qolibi-kuti;
+      @include flex-tanzim(row, 15px);
+      align-items: flex-start;
+
+      .icon {
+        color: $rangi-kabu;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .text {
+        h5 {
+          color: $rangi-asosi-dark;
+          margin: 0 0 10px 0;
+          font-size: 16px;
+        }
+
+        p {
+          color: $rangi-khokistar;
+          margin: 0;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
 @mixin mobile {
   @media (max-width: 510px) {
     @content;
   }
 }
 
+.faq {
+  .top-content {
+    h2 {
+      @include mobile {
+        margin: 0 auto;
+        font-size: 25px;
+      }
+    }
+    p {
+      @include mobile {
+        max-width: 250px;
+        margin: 15px auto 0;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .wrapper {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0 30px;
+
+      .faq-card {
+         h5{
+        width: 250px;
+     }
+        width: 100%;
+        padding: 20px;
+      }
+    }
+  }
+}
 .medical {
   .top-content {
     margin: 0;
